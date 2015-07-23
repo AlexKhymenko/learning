@@ -1,64 +1,25 @@
 <html>
 	<head>
-		<script type="text/javascript"  src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
 		<script type="text/javascript">
 		'use strict'
-
-
-
-		var digit = function(n) {
-			console.log(n);
-			var names;
-			var name = [1, 2 ,3 ,4 ,5 , 7,];
-			var check;
-
-			return function(n) {
-				console.log(check);
-				check += 'ddd ';
-				name.push(8);
-				console.log('name', name);
-				console.log(n);
-				if(!names) {
-					console.log('im here');
-					names = ['trolol', 'trolol2,', 'aksjdhfkjlsadf', 'sadhfkjas']
-				}
-				return names[n];
-			}
-		};
-
-		function lol() {
-			console.log('im here');
-			var x = 0;
-			return function() {
-				console.log('im here2');
-				console.log('x', x);
-				return x +=1;
-			};
-		}
-
-		var j = lol();
-		var k = lol();
-		k();
-		j();
-		console.log('this is  ', k);
-
-		function makeAdder(x) {
-  			return function(y) {
-    			return x + y;
-  			};
-		}
-
-var add5 = makeAdder(5);
-var add10 = makeAdder(10);
-
-console.log(add5(2));  // 7
-console.log(add10(2)); // 12
+		$(document).ready(function(){
+    $("button").click(function(){
+        $("div").velocity({left: '250px'});
+    });
+});
 		
-	
-
 		</script>
 	</head>
 	<body>
-			kjdlfg
+			kjdfflfg
+  <p id="para1">Some text here</p>
+  <button>Start Animation</button>
+
+  <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+			<div>
+				<p id="nice" style="position: absolute">HI there</p>
+			</div>
 	</body>
+</html>
