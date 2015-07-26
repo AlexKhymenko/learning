@@ -5,9 +5,17 @@
 		<script type="text/javascript">
 		'use strict'
 		$(document).ready(function(){
-    $("button").click(function(){
-        $("div").velocity({left: '250px'});
+    	$("button").click(function(){
+        // $("div").velocity({left: '250px', width: "300px", opacity: 1}, {duration: 2000, easing: 'ease-in-out', begin: function() {console.log('started')}, complete: function(){
+        // 	console.log('completed');
+        // }});
+
+        // $("div").velocity('reverse');
+
+
+        $("div").velocity("scroll", {duration: 1000}).velocity({opacity: 0})
     });
+
 });
 		
 		</script>
@@ -17,9 +25,12 @@
   <p id="para1">Some text here</p>
   <button>Start Animation</button>
 
-  <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
-			<div>
-				<p id="nice" style="position: absolute">HI there</p>
-			</div>
+  <div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+<p id="nice">HI there</p>
+  </div>
+  
+		
+				
+		
 	</body>
 </html>
